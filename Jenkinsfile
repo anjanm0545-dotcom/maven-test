@@ -2,12 +2,12 @@ pipeline {
     agent any 
 
     tools {
-        maven 'Maven' 
+        maven 'maven' 
     }
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'master', url: 'https://github.com/harishbitcse82/MyMavenApp.git'
+                git branch: 'master', url: 'https://github.com/anjanm0545-dotcom/maven-test.git'
             }
         }
 
@@ -28,7 +28,7 @@ pipeline {
        
         stage('Run Application') {
             steps {
-                sh 'java -jar target/MyMavenApp-1.0-SNAPSHOT.jar'
+                sh 'java -jar target/my-maven-app-1.0-SNAPSHOT.jar'
             }
         }
 
